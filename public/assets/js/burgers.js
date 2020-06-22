@@ -1,6 +1,5 @@
 $(function() {
     $(".change-devour").on("click", function(event) {
-        console.log("I clicked devour it")
         let id = $(this).data("id");
         let newDevour = $(this).data("newdevour");
         let newDevourState = {
@@ -19,10 +18,10 @@ $(function() {
     });
 
     $(".create-form").on("submit", function(event) {
-        console.log("I was clicked")
         event.preventDefault();
         let newBurger = {
             burger_name: $("#bur").val().trim(),
+            devoured: 0
         };
 
         console.log(newBurger)
@@ -33,6 +32,19 @@ $(function() {
         }).then(
             function() {
                 console.log("created new burger");
+                location.reload();
+            }
+        );
+    });
+
+    $(".delete").on("click", function(event) {
+        let id = $(this).data("id");
+        console.log(id)
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function() {
+                console.log("deleted a burger", id);
                 location.reload();
             }
         );
