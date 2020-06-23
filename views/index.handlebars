@@ -1,32 +1,44 @@
-<h1>Eat Da Burger!</h1>
 
-<h2>Burgers yet to be devoured:</h2>
+<div class="jumbotron">
+    <h1>Eat Da Burger!</h1>
 
-<ul>
-    {{#each burgers}}
+    <iframe src="https://giphy.com/embed/dGyzYOvRPn21y" width="400" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/food-drink-bouncing-hamburger-dGyzYOvRPn21y">via GIPHY</a></p>
+    {{!-- <iframe src="https://giphy.com/embed/dGyzYOvRPn21y" width="400" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/food-drink-bouncing-hamburger-dGyzYOvRPn21y">via GIPHY</a></p> --}}
+</div>
+<div class="row">
+<section class="row-left">
+    <h2>Burgers yet to be devoured:</h2>
+    <ul>
+        {{#each burgers}}
         {{#unless devoured}}
-            {{> burgers/burger-block devour=true}}
+        {{> burgers/burger-block devour=true}}
         {{/unless}}
-    {{/each}}
-</ul>
+        {{/each}}
+    </ul>
+</section>
+<section class="row-right">
+    <h2>Burgers devoured:</h2>
 
-<h2>Burgers devoured:</h2>
-
-<ul>
-    {{#each burgers}}
+    <ul>
+        {{#each burgers}}
         {{#if devoured}}
-            {{> burgers/burger-block devour=false}}
+        {{> burgers/burger-block devour=false}}
         {{/if}}
-    {{/each}}
-</ul>
+        {{/each}}
+    </ul>
+</section>
+</div>
+<div class="add-row">
+<section class="add">
+    <h2>Add a Burger</h2>
+    <form class="create-form">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+        <section class="form-group">
+            <label for="bur">Burger Name:</label>
+            <input type="text" id="bur" name="name">
+        </section>
 
-  <div class="form-group">
-    <label for="bur">Burger Name:</label>
-    <input type="text" id="bur" name="name">
-  </div>
-
-  <button type="submit">Order Burger</button>
-</form>
+        <button type="submit" id="submit">Order Burger</button>
+    </form>
+    </section>
+    </div>
