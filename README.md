@@ -8,6 +8,8 @@
   The user also has the option to delete the burgers that have been eaten, or compost the ones that they no longer want to eat. 
 
   At the bottom of the page is where the user can order their next burger. They add whatever burger they desire in the text box, clidcl Add Burger, and it is added to the list of burgers yet to be devoured. 
+
+  The application uses MySQL to store the data.  It uses one table to store all the burgers, with a boolean column to indicate which list the burger populates on the HTML page.
     
 ## Table of Contents
   * [Installation](#installation)
