@@ -5,7 +5,7 @@
 ## Description
   This is a command-line application that dynamically creates an application for users to order a burger and devour it! When the end user is presented with the home page, there are two lists. On the left is a list of burgers ordered, but still not eaten. On the right is the list of burgers that have been devoured.  
 
-  The user also has the option to delete the burgers that have been eaten, or compost the ones that they no longer want to eat. 
+  The user also has the option to delete the burgers that have been eaten, or compost the ones that they no longer want to eat. The user may also want to order the same burger again, so they have that option as well.
 
   At the bottom of the page is where the user can order their next burger. They add whatever burger they desire in the text box, clidcl Add Burger, and it is added to the list of burgers yet to be devoured. 
 
